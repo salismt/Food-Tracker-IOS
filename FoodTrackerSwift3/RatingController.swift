@@ -11,7 +11,11 @@ import UIKit
 class RatingController: UIView {
     
     // MARK: Properties
-    var rating = 0
+    var rating = 0 {
+        didSet { // this is called :property observer:
+            setNeedsLayout()
+        }
+    }
     var ratingButtons = [UIButton]()
     let spacing = 5
     let starCount = 5
@@ -53,12 +57,21 @@ class RatingController: UIView {
             buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
+        updateButtonSelectionStates()
+    }
+    
+    func updateButtonSelectionStates() {
+        for (index, button) in ratingButtons.enumerated() {
+            // if index of a button is less than the rating, that button should be selected
+            button.isSelected = index < rating
+        }
     }
     
     
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
-        print("Button pressed 👍")
+        rating = ratingButtons.index(of: button)! + 1
+        updateButtonSelectionStates()
     }
 
 }
