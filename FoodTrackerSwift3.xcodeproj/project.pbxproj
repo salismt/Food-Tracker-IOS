@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BAAE4871D923950004AACBB /* RatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BAAE4861D923950004AACBB /* RatingController.swift */; };
 		1BC378941D91265500D5D44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC378931D91265500D5D44E /* AppDelegate.swift */; };
 		1BC378961D91265500D5D44E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC378951D91265500D5D44E /* ViewController.swift */; };
 		1BC378991D91265500D5D44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC378971D91265500D5D44E /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BAAE4861D923950004AACBB /* RatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingController.swift; sourceTree = "<group>"; };
 		1BC378901D91265500D5D44E /* FoodTrackerSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTrackerSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC378931D91265500D5D44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BC378951D91265500D5D44E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				1BC3789A1D91265500D5D44E /* Assets.xcassets */,
 				1BC3789C1D91265500D5D44E /* LaunchScreen.storyboard */,
 				1BC3789F1D91265500D5D44E /* Info.plist */,
+				1BAAE4861D923950004AACBB /* RatingController.swift */,
 			);
 			path = FoodTrackerSwift3;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				1BC378961D91265500D5D44E /* ViewController.swift in Sources */,
 				1BC378941D91265500D5D44E /* AppDelegate.swift in Sources */,
+				1BAAE4871D923950004AACBB /* RatingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +410,7 @@
 				1BC378AF1D91265500D5D44E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BC378B01D91265500D5D44E /* Build configuration list for PBXNativeTarget "FoodTrackerSwift3Tests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +419,7 @@
 				1BC378B21D91265500D5D44E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
