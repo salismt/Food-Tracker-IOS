@@ -13,15 +13,28 @@ class RatingController: UIView {
     // MARK: Properties
     var rating = 0
     var ratingButtons = [UIButton]()
+    let spacing = 5
+    let starCount = 5
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        for _ in 0..<5 {
+        let filledStarImage = UIImage(named: "filled_stars")
+        let emptyStarImage = UIImage(named: "empty_stars")
+        
+        for _ in 0..<starCount {
             let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-            button.backgroundColor = UIColor.red
+            
+            button.adjustsImageWhenHighlighted = false
+            
             // add action button
             button.addTarget(self, action: #selector(ratingButtonTapped(button:)), for: .touchDown)
+            
+            // set image state
+            button.setImage(emptyStarImage, for: .normal)
+            button.setImage(filledStarImage, for: .selected)
+            button.setImage(filledStarImage, for: [.highlighted, .selected])
+            
             // adding it to array instance variable
             ratingButtons += [button]
             addSubview(button)
@@ -31,14 +44,17 @@ class RatingController: UIView {
     
     // MARK: Initialization
     override func layoutSubviews() {
-        var buttonFrame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        let buttonSize = Int(frame.size.height)
+    
+        var buttonFrame = CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize)
         
         // offset each button's origin by length of the button plus spacing
         for (index, button) in ratingButtons.enumerated() {
-            buttonFrame.origin.x = CGFloat(index * (44 + 5))
+            buttonFrame.origin.x = CGFloat(index * (buttonSize + spacing))
             button.frame = buttonFrame
         }
     }
+    
     
     // MARK: Button Action
     func ratingButtonTapped(button: UIButton) {
