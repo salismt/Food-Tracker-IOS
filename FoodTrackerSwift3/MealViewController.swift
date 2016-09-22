@@ -1,18 +1,10 @@
-//
-//  ViewController.swift
-//  FoodTrackerSwift3
-//
-//  Created by Salis on 9/20/16.
-//  Copyright © 2016 Salis. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: Properties
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
     // store viewcontroller to pick up content from library
@@ -39,7 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        mealNameLabel.text = textField.text
     }
     
     // MARK: ImagePickerControllerDelegate
@@ -69,7 +60,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     @IBAction func setDefaultLabelText(_ sender: UIButton) {
-        mealNameLabel.text = "Default text"
     }
    
     
