@@ -16,7 +16,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Do any additional setup after loading the view, typically from a nib.
         nameTextField.delegate = self
         imagePickerController.delegate = self
-        
     }
 
     override func didReceiveMemoryWarning() {

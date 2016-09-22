@@ -78,15 +78,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="F1H-YS-9sE">
-                                <frame key="frameInset" minX="16" minY="28" width="343" height="380"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCD-DJ-8Wo" customClass="RatingController" customModule="FoodTrackerSwift3" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F1H-YS-9sE">
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pMa-IK-K33">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-i1-vCL">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-i1-vCL">
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
                                             <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdE-QO-krs"/>
@@ -107,18 +110,17 @@
                                     <constraint firstAttribute="trailing" secondItem="pMa-IK-K33" secondAttribute="trailing" id="emy-nT-ez8"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCD-DJ-8Wo" customClass="RatingController" customModule="FoodTrackerSwift3" customModuleProvider="target">
-                                <frame key="frameInset" minX="16" minY="444" width="343" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UCD-DJ-8Wo" firstAttribute="trailing" secondItem="F1H-YS-9sE" secondAttribute="trailing" id="By1-ZX-STF"/>
+                            <constraint firstItem="F1H-YS-9sE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="F8K-Qv-YuF"/>
+                            <constraint firstItem="F1H-YS-9sE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Lj5-e6-W1f"/>
                             <constraint firstItem="F1H-YS-9sE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q0p-WI-paz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F1H-YS-9sE" secondAttribute="trailing" id="X3p-2X-QUH"/>
-                            <constraint firstItem="F1H-YS-9sE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cpx-zZ-Tzr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UCD-DJ-8Wo" secondAttribute="bottom" constant="183" id="nJh-pq-F0A"/>
+                            <constraint firstItem="UCD-DJ-8Wo" firstAttribute="leading" secondItem="F1H-YS-9sE" secondAttribute="leading" id="ogx-Wp-nqo"/>
+                            <constraint firstItem="UCD-DJ-8Wo" firstAttribute="top" secondItem="F1H-YS-9sE" secondAttribute="bottom" id="vfI-IR-H7y"/>
                         </constraints>
                     </view>
                     <connections>
